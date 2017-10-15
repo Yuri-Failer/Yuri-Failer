@@ -1,6 +1,72 @@
 @import "reset";
 @import "syntax";
 
+
+$black: #2d2d2d;
+$beige: #e3d6ce;
+
+
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
 body {
-    background: white;
+  background: white;
+  position: relative;
+}
+
+header {
+  background-color: $black;
+  text-align: left;
+  padding: 60px 0 54px;
+  position: relative;
+  
+  .wrap {
+    position: relative;
+  }
+
+  h1 {
+    margin-bottom: 0.1em;
+  }
+
+  a, a:hover, a:focus{
+    color: $beige;
+    text-decoration: none;
+  }
+
+  .extra {
+    font-size: 23px;
+    text-transform: uppercase;
+  }
+
+}
+
+aside {
+  background-color: $beige;
+  position: absolute;
+  top: -60px;
+  left: 30px;
+  height: 100vh;
+  width: 22%;
+
+  h3:after {
+    content: "";
+    border-bottom: black 2px solid;
+    width: 100%;
+    display: block;
+    height: 19px;
+  }
+
+  .block {
+    margin-left: 30px;
+  }
+}
+
+.photo {
+  padding: 30px 40px 30px;
+
+  img {
+    border: black 2px solid;
+  }
 }

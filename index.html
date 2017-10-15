@@ -3,11 +3,77 @@ layout: default
 title: Your New Jekyll Site
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<header>
+  <div class="container wrap">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-4">
+        <h1 class="title"><a href="/">YURI FAILER</a></h1>
+        <a class="extra" href="/">Web-developer</a>
+      </div>
+    </div>
+    <aside class="row">
+      <div class="col-md-12 photo">
+        <img class="img-responsive img-circle" src="images/yuri.jpg" alt="photo">
+      </div>
+      <div class="info block">
+        <h3>INFO</h3>
+      </div>
+      <div class="social block">
+        <h3>SOCIAL</h3>
+        <div class="skype">
+          <svg class="icon icon-skype">
+            <use xlink:href="images/sprite.svg#icon-skype"></use>
+          </svg>
+          <!--<img src="images/sprite.svg" class="skype"></img>-->
+          <p>Skype</p>
+          <p>snai_yuri</p>
+        </div>
+        <div class="linkedin">
+          <svg>
+            <use xlink:href="images/sprite.svg#icon-linkedin"></use>
+          </svg>
+          <p>Linked In</p>
+          <p>snai_yuri</p>
+        </div>
+        <div class="facebook">
+          <i class="facebook"></i>
+          <p>Facebook</p>
+          <p>Yuri Failer</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+</header>
+
+<section role="main">
+  <div class="experience">
+    <h2>EXPERIENCE</h2>
+    <div>
+
+    </div>
+  </div>
+  <div class="education">
+    <h2>EDUCATION</h2>
+  </div>
+  <div class="skills">
+    <h2>SKILLS</h2>
+  </div>
+
+</section>
+
+<div class="footer">
+  <div class="contact">
+    <p>
+      Your Name is<br />
+      What You Are<br />
+      you@example.com
+    </p>
+  </div>
+  <div class="contact">
+    <p>
+      <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+      <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+    </p>
+  </div>
 </div>
