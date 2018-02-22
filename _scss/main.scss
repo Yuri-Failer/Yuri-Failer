@@ -1,85 +1,115 @@
-@import 'foundation.scss';
 @import 'variables.scss';
 @import 'fonts.scss';
-@import "reset";
+//@import "reset";
 @import "syntax";
 
 * {
 	font-family: 'Titillium Web', sans-serif;
 }
 
-header {
-	width: 100%;
-	height: $header-height;
-	background-color: $header-bg;
+.info-section {
+	background-color: $secondary-color;
+	height: 1500px;
+	padding: 0;
+	padding-top: 20px;
+	position: relative;
 
-	.info {
-		background-color: $secondary-color;
-		height: 1500px;
-		padding: 0;
-		position: relative;
+	.img-container {
+		height: $header-height - 20px;
+		border-radius: 50%;
+		width: $header-height - 20px;
+		overflow: hidden;
+		margin: 0 auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border: 2px solid black;
 
-		.img-container {
-			height: $header-height - 20px;
-			border-radius: 50%;
-			width: $header-height - 20px;
-			overflow: hidden;
-			margin: 0 auto;
-			margin-top: 10px;
-			margin-bottom: 10px;
-			border: 2px solid black;
-
-		}
-
-		.caption {
-			font-size: 24px;
-			text-transform: uppercase;
-
-		}
-
-		hr {
-			margin-bottom: 30px;
-			border: 1px solid black;
-
-		}
-		
-		.info-container {
-			padding-right: 0;
-			padding-left: 20px;
-			padding-bottom: 30px;
-
-		}
-
-		.icon-container {
+		img {
 			height: 100%;
 
 		}
 
-		p {
-			margin-top: 0;
-			margin-bottom: 8px;
+	}
 
-		}
+	.caption {
+		font-size: 24px;
+		text-transform: uppercase;
 
-		.property {
-			font-weight: bold;
-			font-size: 16px;
+	}
 
-		}
+	hr {
+		margin-bottom: 30px;
+		border: 1px solid black;
 
-		.value {
-			font-style: italic;
-			font-size: 14px;
+	}
 
-		}
+	.line > div {
+		display: inline-block;
 
-		.link {
-			text-decoration: none;
-			color: $font-content-color;
+	}
 
+	.line {
+		vertical-align: middle;
+
+	}
+	
+	.info-container {
+		padding-right: 0;
+		padding-left: 20px;
+		padding-bottom: 30px;
+
+	}
+
+	.icon-container {
+		height: 100%;
+		width: 20%;
+		vertical-align: top;
+
+		img {
+			max-height: 46px;
+			position: relative;
+			top: 0;
 		}
 
 	}
+
+	.items {
+		width: 70%;
+		margin-left: 5px;
+
+	}
+
+	p {
+		margin-top: 0;
+		margin-bottom: 8px;
+
+	}
+
+	.property {
+		font-weight: bold;
+		font-size: 16px;
+
+	}
+
+	.value {
+		font-style: italic;
+		font-size: 14px;
+
+	}
+
+	.link {
+		text-decoration: none;
+		color: $font-content-color;
+
+	}
+
+}
+
+header {
+	width: 100%;
+	height: $header-height;
+	background-color: $header-bg;
+	position: absolute;
 
 	.title {
 		text-align: center;
@@ -108,16 +138,21 @@ header {
 }
 
 .achievement {
-	
+	margin-top: $header-height;
+
 	.achieve-section {
 		margin-top: 20px;
 
 	}
 	.achieve-head {
 		padding-top: 15px;
+		padding-bottom: 20px;
+		height: 45px;
 		
 		.icon-container {
 			text-align: center;
+			height: 100%;
+
 		}
 
 		img {
@@ -125,17 +160,21 @@ header {
 			border: 2px solid $font-content-color;
 			padding: 3px;
 			border-radius: 50%;
+			position: relative;
+			bottom: 0;
+
 		}
 
 		.caption {
 			font-size: 52px;
 			border-bottom: 2px solid $font-content-color;
+
 		}
 
 	}
 
 	.achieve-body {
-			
+		padding-bottom: 20px;
 
 		ul {
 			list-style: none;
@@ -242,5 +281,4 @@ header {
 		}
 
 	}
-
 }

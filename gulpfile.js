@@ -6,6 +6,8 @@ var cp          = require('child_process');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
 var deploy      = require("gulp-gh-pages");
+var sourcemaps  = require("gulp-sourcemaps");
+
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -44,11 +46,13 @@ gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
  */
 gulp.task('sass', function () {
     return gulp.src('_scss/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['scss'],
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('css'));
@@ -59,8 +63,10 @@ gulp.task('sass', function () {
  */
 gulp.task('js', function(){
     return gulp.src('_js/*.js')
+      .pipe(sourcemaps.init())
       .pipe(concat('main.js'))
       .pipe(uglify())
+      .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest('_site/js'))
       .pipe(browserSync.reload({stream:true}))
       .pipe(gulp.dest('js'));
